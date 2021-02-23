@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Episodes from "./../components/Episodes";
 
-const episodeData = [
+const episodesData = [
   {
     id: 553946,
     url:
@@ -94,7 +94,7 @@ test("re-renders properly with episodes data", () => {
     screen.queryByText(/chapter one: the vanishing of will byers/i)
   ).toBeNull();
 
-  rerender(<Episodes episodes={episodeData} />);
+  rerender(<Episodes episodes={episodesData} />);
 
   expect(
     screen.getByText(/chapter one: the vanishing of will byers/i)
